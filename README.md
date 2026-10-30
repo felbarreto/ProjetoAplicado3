@@ -24,19 +24,31 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 ## Estrutura do repositório
 
 ```
-/data        -> bases de dados brutas e tratadas
-/notebooks   -> análise exploratória e testes de modelo
-/src         -> código-fonte do pipeline (limpeza, treino, avaliação)
-/docs        -> documento de pesquisa (entregas por etapa)
+/Dataset     -> tabelas CSV da base Olist
+/Script      -> Explorato.py (EDA + PoC) e Modelo.py (ajuste e reavaliação)
+/Resultados  -> gráficos da EDA e tabela de métricas
+/Docs        -> documento do projeto (entregas por etapa)
 ```
 
 ## Etapas do projeto
 
 - [x] Etapa 1: Concepção do Produto
-- [ ] Etapa 2: Definição do Produto
-- [ ] Etapa 3: Metodologia
+- [x] Etapa 2: Definição do Produto
+- [x] Etapa 3: Metodologia
 - [ ] Etapa 4: Resultados e Conclusão
 
-## Como executar
+## Metodologia
 
-_(preencher conforme o projeto avançar — dependências, comandos, etc.)_
+**Dados.** Usamos os pedidos entregues da base Olist, sem os que receberam nota 1 ou 2. Cada compra vira um "1" numa matriz cliente × produto (feedback implícito), com o cliente identificado por `customer_unique_id`.
+
+**Modelo.** Um recomendador híbrido que soma três notas, cada uma com um peso:
+
+| Componente | Ideia |
+|---|---|
+| Item-kNN (cosseno + *shrinkage*) | "Quem comprou X também comprou Y" |
+| Conteúdo por categoria | Produtos das categorias que o cliente já compra |
+| Popularidade | Produtos mais vendidos, para quando há pouco histórico |
+
+**Avaliação.** Escondemos a última compra de cada cliente e verificamos se o modelo a coloca no topo da lista (*leave-one-out* temporal). Os parâmetros são escolhidos num grupo de validação (30%) e o resultado final é medido num grupo de teste separado (70%), com HR@K, NDCG@K, MRR, cobertura do catálogo e popularidade média das recomendações.
+
+**Resultado.** O híbrido acerta o produto no top-10 para 8,67% dos clientes de teste, contra 4,97% da prova de conceito da Etapa 2, e recomenda produtos mais variados. Detalhes na seção 4 de `Docs/Etapa3_Projeto_Aplicado_III.docx`.
