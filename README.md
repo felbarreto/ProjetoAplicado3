@@ -45,7 +45,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 | Componente | Ideia |
 |---|---|
-| Item-kNN (cosseno + *shrinkage*) | "Quem comprou X também comprou Y" |
+| Item-kNN | "Quem comprou X também comprou Y" |
 | Conteúdo por categoria | Produtos das categorias que o cliente já compra |
 | Popularidade | Produtos mais vendidos, para quando há pouco histórico |
 
