@@ -35,7 +35,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 - [x] Etapa 1: Concepção do Produto
 - [x] Etapa 2: Definição do Produto
 - [x] Etapa 3: Metodologia
-- [ ] Etapa 4: Resultados e Conclusão
+- [x] Etapa 4: Resultados e Conclusão
 
 ## Metodologia
 
@@ -52,3 +52,9 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 **Avaliação.** Escondemos a última compra de cada cliente e verificamos se o modelo a coloca no topo da lista (*leave-one-out* temporal). Os parâmetros são escolhidos num grupo de validação (30%) e o resultado final é medido num grupo de teste separado (70%), com HR@K, NDCG@K, MRR, cobertura do catálogo e popularidade média das recomendações.
 
 **Resultado.** O híbrido acerta o produto no top-10 para 8,67% dos clientes de teste, contra 4,97% da prova de conceito da Etapa 2, e recomenda produtos mais variados. Detalhes na seção 4 de `Docs/Etapa3_Projeto_Aplicado_III.docx`.
+
+## Apresentação Youtube
+
+**Links.** 
+https://youtu.be/yq4gf5VOwx8?is=3NO4WdwwT1fcOnCT
+https://youtu.be/Da1pONdrvIQ
