@@ -55,6 +55,6 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 ## Apresentação Youtube
 
-**Links.** 
-https://youtu.be/yq4gf5VOwx8?is=3NO4WdwwT1fcOnCT
-https://youtu.be/Da1pONdrvIQ
+**Links dos Videos.** 
+- https://youtu.be/yq4gf5VOwx8?is=3NO4WdwwT1fcOnCT
+- https://youtu.be/Da1pONdrvIQ
